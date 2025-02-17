@@ -1,7 +1,8 @@
 # enbolivares
 
-<p align="center">
-  <img style='border-radius: 8px' src="./src/public/enbolivares-mockup-macbook.png" alt="enbolivares MacBook mockup">
+<p align="center" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+  <img style='border-radius: 8px;' src="./public/enbolivares-mockup-macbook.png" alt="enbolivares MacBook mockup">
+  <img style='border-radius: 8px;' src="./public/enbolivares-mockup-iphones.png" alt="enbolivares Iphones mockup">
 </p>
 
 Este proyecto es una página web que permite consultar el precio del dólar y el euro en bolívares y viceversa, utilizando la API de Pydolarvzla. Inspirado en la página https://alcambio.app/ y haciendo algunas mejoras y cambios en el diseño y experiencia de usuario.
