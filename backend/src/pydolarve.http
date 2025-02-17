@@ -1,0 +1,8 @@
+### Get monitors data
+http://localhost:3000/euro
+
+### Get monitors dollar data
+http://localhost:3000/dollar
+
+### Get monitors error
+http://localhost:3000/dollarrr
