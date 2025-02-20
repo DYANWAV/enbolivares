@@ -4,11 +4,11 @@ import { InputsContainer } from './components/InputsContainer/InputsContainer'
 import { LastUpdate } from './components/LastUpdate/LastUpdate'
 import { Percent } from './components/Percent/Percent'
 import { ResetButton } from './components/ResetButton/ResetButton'
-import { SelectCurency } from './components/SelectCurrency/SelectCurrency'
+import { SelectCurrency } from './components/SelectCurrency/SelectCurrency'
 import { SelectMonitor } from './components/SelectMonitor/SelectMonitor'
+import { APP_TITLE, CALCULATOR_TITLE } from './config'
 import { useMonitorsStore } from './store/monitorsStore'
 import { selectedCurrencyStore } from './store/selectedCurrencyStore'
-import { APP_TITLE, CALCULATOR_TITLE } from './config'
 
 function App() {
   const fetchMonitors = useMonitorsStore(x => x.fetchMonitors)
@@ -34,7 +34,7 @@ function App() {
 
         <div className="flex justify-between gap-4">
           <SelectMonitor />
-          <SelectCurency />
+          <SelectCurrency />
         </div>
 
         <InputsContainer />

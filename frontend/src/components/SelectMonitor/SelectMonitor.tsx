@@ -1,50 +1,54 @@
-import { FC, SelectHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 import { useMonitorsStore } from '../../store/monitorsStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
-import { MonitorsList } from '../../types'
+import { MonitorName, MonitorsList } from '../../types'
 import { cn } from '../../utils/cn'
+import { DropDown } from '../DropDown/DropDown'
+import { DropDownItem } from '../DropDown/DropDownItem'
 
-export type SelectProps = SelectHTMLAttributes<HTMLSelectElement>
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export const SelectMonitor: FC<SelectProps> = ({ className, ...props }) => {
-  const monitorsData = useMonitorsStore(x => x.monitorsData)
+export const SelectMonitor = ({ className, ...props }: Props) => {
+  const monitorList = useMonitorsStore(x => x.monitorsData.monitors_list)
   const selectedMonitor = useSelectedMonitorStore(x => x.selectedMonitor)
   const changeMonitor = useSelectedMonitorStore(x => x.changeMonitor)
+
+  const onClick = (newMonitor: MonitorName) => {
+    changeMonitor(newMonitor)
+  }
 
   return (
     <>
       {selectedMonitor && (
-        <select
-          value={selectedMonitor}
-          onChange={changeMonitor}
-          name="monitor"
-          id="monitor"
-          className={cn(
-            'select',
-            'rounded-md min-w-[140px] w-full max-w-[210px]',
-            className
-          )}
-          {...props}>
-          <MonitorOptions monitorsList={monitorsData.monitors_list} />
-        </select>
+        <DropDown
+          className={cn('min-w-max', className)}
+          label={monitorList?.[selectedMonitor]?.title}
+          items={<Options monitorList={monitorList} onClick={onClick} />}
+          {...props}
+        />
       )}
     </>
   )
 }
 
-interface Props {
-  monitorsList: MonitorsList
+interface OptionsProps {
+  monitorList: MonitorsList
+  onClick: (monitor: MonitorName) => void
 }
 
-function MonitorOptions({ monitorsList }: Props) {
+export const Options = ({ monitorList, onClick }: OptionsProps) => {
   return (
     <>
-      {monitorsList &&
-        Object.entries(monitorsList).map(([key, value]) => (
-          <option className="option" key={key} value={value.name}>
-            {value.title}
-          </option>
-        ))}
+      {monitorList &&
+        Object.entries(monitorList).map(([key, value]) => {
+          return (
+            <DropDownItem
+              key={key}
+              value={value.title}
+              onClick={() => onClick(value.name)}
+            />
+          )
+        })}
     </>
   )
 }

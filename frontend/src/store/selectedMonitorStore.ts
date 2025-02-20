@@ -3,15 +3,15 @@ import { MONITOR_NAME, MonitorName } from '../types.d'
 
 interface SelectedMonitorStoreType {
   selectedMonitor: MonitorName
-  changeMonitor: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  changeMonitor: (newMonitor: MonitorName) => void
   resetSelectedMonitor: () => void
 }
 
 export const useSelectedMonitorStore = create<SelectedMonitorStoreType>()(
   set => ({
     selectedMonitor: MONITOR_NAME.paralelo,
-    changeMonitor: (e: React.ChangeEvent<HTMLSelectElement>) => {
-      set({ selectedMonitor: e.target.value as MonitorName })
+    changeMonitor: newMonitor => {
+      set({ selectedMonitor: newMonitor })
     },
     resetSelectedMonitor: () => set({ selectedMonitor: MONITOR_NAME.paralelo }),
   })
