@@ -3,9 +3,10 @@ import { Currency, CURRENCY } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { formatInputValue } from '../../utils/formatInputValue'
 import { CopyButton } from '../CopyButton/CopyButton'
-import { useFocusInput } from './useFocusInput'
-import { HiddenInput } from './HiddenInput'
 import { Input } from '../Input'
+import './CalculatorInput.css'
+import { HiddenInput } from './HiddenInput'
+import { useFocusInput } from './useFocusInput'
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   currencySymbol?: Currency

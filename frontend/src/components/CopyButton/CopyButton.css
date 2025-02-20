@@ -1,0 +1,13 @@
+@import '../../index.css';
+
+.copy_button {
+  @apply cursor-pointer transition;
+
+  &.is_copied {
+    @apply text-emerald-600 hover:text-emerald-600;
+  }
+
+  &.is_not_copied {
+    @apply text-white/20 hover:text-white-500;
+  }
+}

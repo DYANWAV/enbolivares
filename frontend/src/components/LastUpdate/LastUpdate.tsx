@@ -1,5 +1,6 @@
 import { useMonitorsStore } from '../../store/monitorsStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
+import './LastUpdate.css'
 
 export const LastUpdate: React.FC = () => {
   const monitorsData = useMonitorsStore(x => x.monitorsData)

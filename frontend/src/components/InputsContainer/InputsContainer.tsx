@@ -1,8 +1,8 @@
 import { HTMLAttributes } from 'react'
-import { CalculatorInput } from '../CalculatorInput/CalculatorInput'
-import { cn } from '../../utils/cn'
-import { useCalculatorInput } from '../CalculatorInput/useCalculatorInput'
 import { CURRENCY } from '../../types.d'
+import { cn } from '../../utils/cn'
+import { CalculatorInput } from '../CalculatorInput/CalculatorInput'
+import { useCalculatorInput } from '../CalculatorInput/useCalculatorInput'
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 

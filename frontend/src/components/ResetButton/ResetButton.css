@@ -1,0 +1,7 @@
+@import '../../index.css';
+
+.reset_btn {
+  @apply hover:cursor-pointer hover:text-white transition;
+  @apply disabled:cursor-default disabled:text-white-500/30;
+  @apply rounded-sm text-white-500;
+}

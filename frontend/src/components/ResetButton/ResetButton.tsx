@@ -1,9 +1,10 @@
+import { ButtonHTMLAttributes } from 'react'
 import { selectedCurrencyStore } from '../../store/selectedCurrencyStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
-import { IconRefresh } from '../Icons'
 import { CURRENCY, MONITOR_NAME } from '../../types.d'
 import { cn } from '../../utils/cn'
-import { ButtonHTMLAttributes } from 'react'
+import { IconRefresh } from '../Icons'
+import './ResetButton.css'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 

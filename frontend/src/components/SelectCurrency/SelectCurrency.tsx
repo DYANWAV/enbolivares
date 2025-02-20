@@ -4,6 +4,7 @@ import { CURRENCY, Currency } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { SelectProps } from '../SelectMonitor/SelectMonitor'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
+import './SelectCurrency.css'
 
 export const SelectCurency: FC<SelectProps> = ({ className, ...props }) => {
   const selectedCurrency = selectedCurrencyStore(x => x.selectedCurrency)

@@ -1,0 +1,7 @@
+@import '../../index.css';
+
+.currency_input {
+  @apply text-white text-right hover:border-white/30 focus:border-white/40;
+  @apply focus:outline-none w-full;
+  @apply caret-transparent;
+}

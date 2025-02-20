@@ -1,0 +1,5 @@
+@import '../../index.css';
+
+.last_update {
+  @apply text-white-500 text-sm;
+}

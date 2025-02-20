@@ -2,6 +2,7 @@ import { ButtonHTMLAttributes } from 'react'
 import { Currency, CURRENCY } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { IconChecks, IconClipboard } from '../Icons'
+import './CopyButton.css'
 import { useCopyButton } from './useCopyButton'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
