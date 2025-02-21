@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "pnpm --filter ** dev",
     "build": "pnpm --filter ** build",
-    "start": "pnpm --filter ** dev",
+    "start": "pnpm --filter ** start",
     "preview": "pnpm --filter ** preview"
   },
   "keywords": [],
