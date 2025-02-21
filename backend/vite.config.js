@@ -6,7 +6,7 @@ export default defineConfig({
       entry: 'src/index.js',
       name: 'enbolivares-api',
       fileName: 'index',
-      formats: ['cjs'],
+      formats: ['es'],
     },
     outDir: 'dist',
   },
