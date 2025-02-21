@@ -1,6 +1,6 @@
-import { app } from './app.js'
-import { UNEXPECTED_ERROR, PORT } from './config.js'
-import { PyDolar } from './services/pydolarave.js'
+import { app } from './src/app.js'
+import { UNEXPECTED_ERROR, PORT } from './src/config.js'
+import { PyDolar } from './src/services/pydolarave.js'
 
 app.get('/:currency', async (req, res) => {
   const { currency } = req.params
