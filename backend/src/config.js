@@ -1,4 +1,7 @@
-process.loadEnvFile()
+// process.loadEnvFile()
+import dotenv from 'dotenv'
+dotenv.config()
+console.log({ port: process.env.PORT, url: process.env.PYDOLARVE_URL })
 
 export const { PYDOLARVE_URL, PORT = 3000 } = process.env
 
