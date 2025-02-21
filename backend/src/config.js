@@ -1,6 +1,6 @@
 process.loadEnvFile()
 
-export const { PYDOLARVE_URL } = process.env
+export const { PYDOLARVE_URL, PORT = 3000 } = process.env
 
 export const OFICIAL = 'oficial'
 export const BCV = 'bcv'

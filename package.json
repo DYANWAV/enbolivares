@@ -1,10 +1,13 @@
 {
-  "name": "usdves",
+  "name": "enbolivares",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter ** dev"
+    "dev": "pnpm --filter ** dev",
+    "build": "pnpm --filter ** build",
+    "start": "pnpm --filter ** dev",
+    "preview": "pnpm --filter ** preview"
   },
   "keywords": [],
   "author": "",

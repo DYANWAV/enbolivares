@@ -1,8 +1,6 @@
 import { app } from './app.js'
-import { UNEXPECTED_ERROR } from './config.js'
+import { UNEXPECTED_ERROR, PORT } from './config.js'
 import { PyDolar } from './services/pydolarave.js'
-
-const PORT = process.env.PORT ?? 3000
 
 app.get('/:currency', async (req, res) => {
   const { currency } = req.params
