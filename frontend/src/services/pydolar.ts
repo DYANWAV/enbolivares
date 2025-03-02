@@ -1,8 +1,8 @@
 import { Currency, MonitorsData } from '../types'
-// const API_URL = import.meta.env.VITE_ENBOLIVARES_API_URL
+
 const API_URL = import.meta.env.PROD
   ? import.meta.env.VITE_ENBOLIVARES_API_URL
-  : import.meta.env.VITE_API_URL
+  : import.meta.env.VITE_LOCALHOST_URL
 
 export class PyDolar {
   static PYDOLAR_URL = API_URL
