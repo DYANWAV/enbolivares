@@ -16,7 +16,11 @@ export const InputsContainer = ({ className, ...props }: Props) => {
   } = useCalculatorInput()
 
   return (
-    <div className={cn('flex flex-col text-2xl gap-2', className)} {...props}>
+    <div
+      translate="no"
+      className={cn('flex flex-col text-2xl gap-2', className)}
+      {...props}
+    >
       <CalculatorInput
         handleClick={handleClick}
         value={usdValue}

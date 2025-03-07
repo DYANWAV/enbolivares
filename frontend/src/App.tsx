@@ -20,7 +20,10 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl md:text-4xl font-medium text-emerald-600">
+      <h1
+        translate="no"
+        className="text-3xl md:text-4xl font-medium text-emerald-600"
+      >
         {APP_TITLE}
       </h1>
 
@@ -32,7 +35,7 @@ function App() {
           <ResetButton />
         </header>
 
-        <div className="flex justify-between gap-4">
+        <div translate="no" className="flex justify-between gap-4">
           <SelectMonitor />
           <SelectCurrency />
         </div>
