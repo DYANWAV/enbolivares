@@ -31,7 +31,8 @@ export const CalculatorInput = ({
         className,
         focusStyle
       )}
-      {...props}>
+      {...props}
+    >
       <label className="text-emerald-600" htmlFor={inputID}>
         {CURRENCY[currencySymbol].symbol}
       </label>
@@ -47,6 +48,7 @@ export const CalculatorInput = ({
         className="currency_input"
         onFocus={onFocus}
         onBlur={onBlur}
+        inputMode="numeric"
       />
       <CopyButton currencySymbol={currencySymbol} value={value} />
     </div>
