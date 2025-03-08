@@ -51,11 +51,7 @@ export const SelectCurrency = ({ className, ...props }: Props) => {
     <>
       {selectedCurrency && (
         <DropDown
-          className={cn(
-            'select',
-            'rounded-full min-w-[120px] max-w-[20px]',
-            className
-          )}
+          className={cn('rounded-full min-w-[120px] max-w-[20px]', className)}
           label={CURRENCY[selectedCurrency].title}
           items={
             <>

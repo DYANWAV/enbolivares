@@ -18,10 +18,15 @@ export const DropDownItem = ({
       <div
         onClick={onClick}
         className={cn(
-          'text-left font-semibold *:font-semibold text-emerald-600 select-none hover:text-emerald-400 px-4 py-1 hover:bg-emerald-950 w-full transition',
+          'w-full transition',
+          'text-left font-semibold *:font-semibold',
+          'text-emerald-600 select-none hover:text-emerald-400',
+          'px-4 py-1 hover:bg-emerald-950',
+          'rounded-md',
           className
         )}
-        {...props}>
+        {...props}
+      >
         {value}
       </div>
     </>

@@ -22,11 +22,13 @@ export const DropdownContent = ({
         'rounded-sm',
         'bg-[var(--bg-color)]',
         'border-gray',
-        'absolute left-0 mt-4 min-w-full flex flex-col items-center max-h-[45vh] overflow-y-scroll [-ms-overflow-style:_none] ',
+        'absolute left-0 mt-4 min-w-full flex gap-1 flex-col items-center max-h-[45vh] overflow-y-scroll [-ms-overflow-style:_none] ',
         '[&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar]:h-0',
+        'p-1',
         className
       )}
-      {...props}>
+      {...props}
+    >
       <>{children}</>
     </div>
   )
