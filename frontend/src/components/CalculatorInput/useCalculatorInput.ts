@@ -37,6 +37,7 @@ export const useCalculatorInput = () => {
     const target = e.target as HTMLInputElement
     target.selectionEnd = target.value.length
     target.selectionStart = target.value.length
+    target.value = '0.00'
   }
 
   useEffect(() => {

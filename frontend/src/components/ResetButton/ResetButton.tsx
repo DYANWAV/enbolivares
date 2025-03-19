@@ -31,7 +31,8 @@ export const ResetButton: React.FC<ButtonProps> = ({ className, ...props }) => {
         selectedCurrency === CURRENCY.dollar.name
       }
       onClick={resetCalculatorState}
-      {...props}>
+      {...props}
+    >
       <IconRefresh />
     </button>
   )
