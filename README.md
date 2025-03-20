@@ -1,4 +1,4 @@
-<a href="https://enbolivares.onrender.com/"><h1>enbolivares</h1></a>
+<a href="https://enbolivares.onrender.com/" target="_blank"><h1>enbolivares</h1></a>
 
 <p align="center" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
   <img style='border-radius: 8px;' src="./public/enbolivares-mockup-macbook.png" alt="enbolivares MacBook mockup">
