@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { formatInputValue } from '../../utils/formatInputValue'
 import { Currency, CURRENCY } from '../../types.d'
+import { formatInputValue } from '../../utils/formatInputValue'
 
 export const useCopyButton = (value: string, currencySymbol: Currency) => {
   const [isCopied, setIsCopied] = useState(false)
@@ -12,7 +12,9 @@ export const useCopyButton = (value: string, currencySymbol: Currency) => {
     setIsCopied(true)
   }
 
-  const isCopiedStyle = isCopied ? 'is_copied' : 'is_not_copied'
+  const isCopiedStyle = isCopied
+    ? 'text-emerald-600 hover:text-emerald-600'
+    : 'text-white/20 hover:text-white-500'
 
   useEffect(() => {
     const timeoutID = setTimeout(() => {

@@ -4,7 +4,6 @@ import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
 import { CURRENCY, MONITOR_NAME } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { IconRefresh } from '../Icons'
-import './ResetButton.css'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
@@ -25,7 +24,12 @@ export const ResetButton: React.FC<ButtonProps> = ({ className, ...props }) => {
 
   return (
     <button
-      className={cn('reset_btn', className)}
+      className={cn(
+        'hover:cursor-pointer hover:text-white transition',
+        'disabled:cursor-default disabled:text-white-500/30',
+        'rounded-sm text-white-500',
+        className
+      )}
       disabled={
         selectedMonitor === MONITOR_NAME.paralelo &&
         selectedCurrency === CURRENCY.dollar.name

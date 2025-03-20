@@ -1,6 +1,5 @@
 import { HTMLAttributes } from 'react'
 import { cn } from '../../utils/cn'
-import './DropDown.css'
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   value?: string

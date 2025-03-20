@@ -2,7 +2,6 @@ import { ButtonHTMLAttributes } from 'react'
 import { Currency, CURRENCY } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { IconChecks, IconClipboard } from '../Icons'
-import './CopyButton.css'
 import { useCopyButton } from './useCopyButton'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -24,8 +23,9 @@ export const CopyButton = ({
   return (
     <button
       onClick={onClick}
-      className={cn('copy_button', className, isCopiedStyle)}
-      {...props}>
+      className={cn('cursor-pointer transition', isCopiedStyle, className)}
+      {...props}
+    >
       {!isCopied && <IconClipboard />}
       {isCopied && <IconChecks />}
     </button>

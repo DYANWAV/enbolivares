@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, useState } from 'react'
 import { cn } from '../../utils/cn'
 import { IconChevronDown, IconChevronUp } from '../Icons'
-import './DropDown.css'
 import DropdownContent from './DropDownContent'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -31,7 +30,8 @@ export const DropDown = ({ label, items, className, ...props }: Props) => {
           'text-sm md:text-base',
           className
         )}
-        {...props}>
+        {...props}
+      >
         <span className="flex transition justify-between hover:text-emerald-400 hover:border-white/15 items-center">
           {label} {!open && <IconChevronDown />} {open && <IconChevronUp />}
         </span>

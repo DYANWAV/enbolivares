@@ -4,7 +4,6 @@ import { cn } from '../../utils/cn'
 import { formatInputValue } from '../../utils/formatInputValue'
 import { CopyButton } from '../CopyButton/CopyButton'
 import { Input } from '../Input'
-import './CalculatorInput.css'
 import { HiddenInput } from './HiddenInput'
 import { useFocusInput } from './useFocusInput'
 
@@ -45,7 +44,11 @@ export const CalculatorInput = ({
         onChange={onChange}
         onClick={handleClick}
         aria-label="Campo numérico"
-        className="currency_input"
+        className={cn(
+          'text-white text-right hover:border-white/30 focus:border-white/40',
+          'focus:outline-none w-full',
+          'caret-transparent'
+        )}
         onFocus={onFocus}
         onBlur={onBlur}
         inputMode="numeric"

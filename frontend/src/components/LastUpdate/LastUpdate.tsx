@@ -1,6 +1,6 @@
 import { useMonitorsStore } from '../../store/monitorsStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
-import './LastUpdate.css'
+import { cn } from '../../utils/cn'
 
 export const LastUpdate: React.FC = () => {
   const monitorsData = useMonitorsStore(x => x.monitorsData)
@@ -11,7 +11,7 @@ export const LastUpdate: React.FC = () => {
   return (
     <>
       <section>
-        <p className="last_update">Última actualización</p>
+        <p className={cn('text-white-500 text-sm', '')}>Última actualización</p>
 
         {!lastUpdate && <time>...Cargando</time>}
         {lastUpdate && (

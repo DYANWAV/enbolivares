@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   -moz-osx-font-smoothing: grayscale;
@@ -14,13 +16,6 @@
   text-rendering: optimizeLegibility;
 }
 
-@theme {
-  --color-gray: rgba(45, 45, 45, 0.7);
-  --color-dark-gray: rgb(24 24 24);
-  --color-white-500: rgba(163, 163, 163);
-  --color-white: rgba(255, 255, 255, 0.87);
-}
-
 input {
   padding: 4px;
   border-radius: 4px;
@@ -33,12 +28,4 @@ body {
   place-items: center;
   min-height: 100vh;
   font-family: 'Manrope Variable', sans-serif;
-}
-
-.calculator_container {
-  @apply flex flex-col mx-auto gap-6;
-  @apply p-4 md:p-6 rounded-2xl w-full min-w-[300px] max-w-[500px];
-  @apply border border-transparent md:border-gray;
-  @apply md:shadow-lg md:shadow-black/20;
-  @apply md:bg-dark-gray;
 }

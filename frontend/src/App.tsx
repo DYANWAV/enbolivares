@@ -9,6 +9,7 @@ import { SelectMonitor } from './components/SelectMonitor/SelectMonitor'
 import { APP_TITLE, CALCULATOR_TITLE } from './config'
 import { useMonitorsStore } from './store/monitorsStore'
 import { selectedCurrencyStore } from './store/selectedCurrencyStore'
+import { cn } from './utils/cn'
 
 function App() {
   const fetchMonitors = useMonitorsStore(x => x.fetchMonitors)
@@ -27,7 +28,15 @@ function App() {
         {APP_TITLE}
       </h1>
 
-      <article className="calculator_container">
+      <article
+        className={cn(
+          'flex flex-col mx-auto gap-6',
+          'p-4 md:p-6 rounded-2xl w-full min-w-[300px] max-w-[500px]',
+          'border border-transparent md:border-gray',
+          'md:shadow-lg md:shadow-black/20',
+          'md:bg-dark-gray'
+        )}
+      >
         <header className="flex justify-between">
           <h2 className="text-xl md:text-2xl text-left font-medium text-white">
             {CALCULATOR_TITLE}

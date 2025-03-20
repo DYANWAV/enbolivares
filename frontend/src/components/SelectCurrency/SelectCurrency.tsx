@@ -5,7 +5,6 @@ import { CURRENCY, Currency } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { DropDown } from '../DropDown/DropDown'
 import { DropDownItem } from '../DropDown/DropDownItem'
-import './SelectCurrency.css'
 
 // export const SelectCurency: FC<SelectProps> = ({ className, ...props }) => {
 //   const selectedCurrency = selectedCurrencyStore(x => x.selectedCurrency)
