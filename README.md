@@ -1,13 +1,13 @@
-# enbolivares
+<a href="https://enbolivares.onrender.com/"><h1>enbolivares</h1></a>
 
 <p align="center" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
   <img style='border-radius: 8px;' src="./public/enbolivares-mockup-macbook.png" alt="enbolivares MacBook mockup">
   <img style='border-radius: 8px;' src="./public/enbolivares-mockup-iphones.png" alt="enbolivares Iphones mockup">
 </p>
 
-Este proyecto es una página web que permite consultar el precio del dólar y el euro en bolívares y viceversa, utilizando la API de Pydolarvzla. Inspirado en la página https://alcambio.app/ y haciendo algunas mejoras y cambios en el diseño y experiencia de usuario.
+Este proyecto es una página web que permite consultar el precio del dólar y el euro en bolívares y viceversa, utilizando la API de Pydolarvzla. Inspirado en la página https://alcambio.app/ y haciendo algunas mejoras en el diseño y experiencia de usuario.
 
-<!-- La página web está alojada en Netlify. Puedes acceder a la aplicación en el siguiente enlace: [BolivarVzla](https://) -->
+La página web está alojada en render.com. Puedes acceder a la aplicación en el siguiente enlace: [https://enbolivares.onrender.com/](https://enbolivares.onrender.com/)
 
 ## Características
 
