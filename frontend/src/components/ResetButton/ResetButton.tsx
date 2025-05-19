@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from 'react'
 import { selectedCurrencyStore } from '../../store/selectedCurrencyStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
-import { CURRENCY, MONITOR_NAME } from '../../types.d'
+import { CURRENCY, MONITOR_NAME, MonitorName } from '../../types.d'
 import { cn } from '../../utils/cn'
 import { IconRefresh } from '../Icons'
 
@@ -31,7 +31,7 @@ export const ResetButton: React.FC<ButtonProps> = ({ className, ...props }) => {
         className
       )}
       disabled={
-        selectedMonitor === MONITOR_NAME.paralelo &&
+        selectedMonitor === (MONITOR_NAME.paralelo as MonitorName) &&
         selectedCurrency === CURRENCY.dollar.name
       }
       onClick={resetCalculatorState}

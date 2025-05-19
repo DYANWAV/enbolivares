@@ -9,10 +9,11 @@ interface SelectedMonitorStoreType {
 
 export const useSelectedMonitorStore = create<SelectedMonitorStoreType>()(
   set => ({
-    selectedMonitor: MONITOR_NAME.paralelo,
+    selectedMonitor: MONITOR_NAME.paralelo as MonitorName,
     changeMonitor: newMonitor => {
       set({ selectedMonitor: newMonitor })
     },
-    resetSelectedMonitor: () => set({ selectedMonitor: MONITOR_NAME.paralelo }),
+    resetSelectedMonitor: () =>
+      set({ selectedMonitor: MONITOR_NAME.paralelo as MonitorName }),
   })
 )
