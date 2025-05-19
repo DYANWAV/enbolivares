@@ -3,7 +3,7 @@ export const MONITOR_NAME = {
   bcv: 'bcv',
   binance: 'binance',
   cripto_euro: 'cripto_euro',
-  paralelo: 'paralelo',
+  paralelo: 'enparalelovzla',
   euro_today: 'euro_today',
   paypal: 'paypal',
   promedio: 'promedio',
@@ -42,8 +42,43 @@ export const CURRENCY = {
   },
 } as const
 
+// export type MonitorsData = {
+//   monitors_list: MonitorsList
+//   monitors: Monitors
+// }
+
+// export type MonitorsData = {
+//   datetime: {
+//     date: string
+//     time: string
+//   }
+//   monitors: {
+//     bcv: {
+//       change: number
+//       color: 'green' | 'red'
+//       last_update: string
+//       percent: number
+//       price: number
+//       symbol: '▲' | '▼'
+//       title: string
+//     }
+//     enparalelovzla: {
+//       change: number
+//       color: 'green' | 'red'
+//       last_update: string
+//       percent: number
+//       price: number
+//       symbol: '▲' | '▼'
+//       title: string
+//     }
+//   }
+// }
+
 export type MonitorsData = {
-  monitors_list: MonitorsList
+  datetime: {
+    date: string
+    time: string
+  }
   monitors: Monitors
 }
 

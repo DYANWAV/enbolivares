@@ -32,7 +32,7 @@ export const DropDown = ({ label, items, className, ...props }: Props) => {
         )}
         {...props}
       >
-        <span className="flex transition justify-between hover:text-emerald-400 hover:border-white/15 items-center">
+        <span className="flex transition justify-between hover:text-emerald-400 hover:border-white/15 items-center truncate">
           {label} {!open && <IconChevronDown />} {open && <IconChevronUp />}
         </span>
 

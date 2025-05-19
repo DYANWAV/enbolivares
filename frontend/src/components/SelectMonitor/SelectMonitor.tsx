@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from 'react'
 import { useMonitorsStore } from '../../store/monitorsStore'
 import { useSelectedMonitorStore } from '../../store/selectedMonitorStore'
-import { MonitorName, MonitorsList } from '../../types'
+import { MonitorName, Monitors } from '../../types'
 import { cn } from '../../utils/cn'
 import { DropDown } from '../DropDown/DropDown'
 import { DropDownItem } from '../DropDown/DropDownItem'
@@ -9,7 +9,7 @@ import { DropDownItem } from '../DropDown/DropDownItem'
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const SelectMonitor = ({ className, ...props }: Props) => {
-  const monitorList = useMonitorsStore(x => x.monitorsData.monitors_list)
+  const monitorList = useMonitorsStore(x => x.monitorsData.monitors)
   const selectedMonitor = useSelectedMonitorStore(x => x.selectedMonitor)
   const changeMonitor = useSelectedMonitorStore(x => x.changeMonitor)
 
@@ -22,7 +22,7 @@ export const SelectMonitor = ({ className, ...props }: Props) => {
       {selectedMonitor && (
         <DropDown
           className={cn('min-w-max', className)}
-          label={monitorList?.[selectedMonitor]?.title}
+          label={selectedMonitor}
           items={<Options monitorList={monitorList} onClick={onClick} />}
           {...props}
         />
@@ -32,7 +32,7 @@ export const SelectMonitor = ({ className, ...props }: Props) => {
 }
 
 interface OptionsProps {
-  monitorList: MonitorsList
+  monitorList: Monitors
   onClick: (monitor: MonitorName) => void
 }
 
@@ -40,12 +40,12 @@ export const Options = ({ monitorList, onClick }: OptionsProps) => {
   return (
     <>
       {monitorList &&
-        Object.entries(monitorList).map(([key, value]) => {
+        Object.entries(monitorList).map(([key]) => {
           return (
             <DropDownItem
               key={key}
-              value={value.title}
-              onClick={() => onClick(value.name)}
+              value={key}
+              onClick={() => onClick(key as MonitorName)}
             />
           )
         })}
